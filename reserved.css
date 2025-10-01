@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: linear-gradient(to right, #e2e2e2, #c9d6ff);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    animation: backgroundFade 5s infinite alternate;
+}
+
+@keyframes backgroundFade {
+    0% {
+        background: linear-gradient(to right, #e2e2e2, #c9d6ff);
+    }
+    100% {
+        background: linear-gradient(to right, #c9d6ff, #e2e2e2);
+    }
+}
+
+.confirmation-container {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    animation: fadeInUp 1s forwards;
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.checkmark-circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #4caf50;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 20px;
+    animation: scaleIn 0.5s ease-out forwards;
+}
+
+@keyframes scaleIn {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.checkmark {
+    width: 50px;
+    height: 25px;
+    border: 5px solid #fff;
+    border-top: none;
+    border-right: none;
+    transform: rotate(-45deg);
+    animation: drawCheck 0.5s 0.5s ease forwards;
+}
+
+@keyframes drawCheck {
+    0% {
+        width: 0;
+        height: 0;
+    }
+    100% {
+        width: 50px;
+        height: 25px;
+    }
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 10px;
+    animation: textFadeIn 1s 0.5s forwards;
+    opacity: 0;
+}
+
+@keyframes textFadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+p {
+    color: #666;
+    margin-bottom: 20px;
+    animation: textFadeIn 1s 0.7s forwards;
+    opacity: 0;
+}
+
+button {
+    background-color: #ff9513;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    animation: textFadeIn 1s 0.9s forwards;
+    opacity: 0;
+}
+
+button:hover {
+    background-color: orange;
+}

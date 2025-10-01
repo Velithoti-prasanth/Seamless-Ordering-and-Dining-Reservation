@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart Page with Payment Slide</title>
+    <link rel="stylesheet" href="cart.css">
+</head>
+<body">
+
+    <h2>Your Cart</h2>
+    <div class="cart">
+        <div id="cart-items"></div>
+        <div class="cart-total">
+            Total Cost: ₹<span id="total-cost">0</span>
+        </div>
+    </div>
+
+    <div class="address" id="addressSection">
+        <h3>Delivery Address</h3>
+        <input type="text" id="name" placeholder="Full Name" required>
+        <input type="text" id="street" placeholder="Street Address" required>
+        <input type="text" id="city" placeholder="City" required>
+        <input type="text" id="state" placeholder="State" required>
+        <input type="text" id="zip" placeholder="Zip Code" required>
+        <input type="text" id="phone" placeholder="Phone Number" required>
+    </div>
+
+    <div class="slide-container" id="slideContainer">
+        <span class="slide-label">Slide to Pay</span>
+        <label for="slide-button"></label>
+        <input type="range" min="0" max="100" value="0" class="slide-button" id="slideButton">
+        <span class="total-to-pay">₹<span id="slide-total">0</span></span>
+        <div class="slide-to-pay-message">Slide to Pay</div>
+    </div>
+
+    <script>
+        let cart = JSON.parse(localStorage.getItem('cart')) || {};
+
+        function displayCart() {
+            const cartItemsDiv = document.getElementById('cart-items');
+            const totalCostSpan = document.getElementById('total-cost');
+            const slideTotalSpan = document.getElementById('slide-total');
+            const slideContainer = document.getElementById('slideContainer');
+            const addressSection = document.getElementById('addressSection');
+            cartItemsDiv.innerHTML = '';
+            let totalCost = 0;
+
+            if (Object.keys(cart).length === 0) {
+                cartItemsDiv.innerHTML = '<p class="empty-cart">Your cart is empty.</p>';
+                totalCostSpan.innerText = '0';
+                slideTotalSpan.innerText = '0';
+                slideContainer.style.display = 'none';
+                addressSection.style.display = 'none';
+                return;
+            }
+
+            for (let item in cart) {
+                let itemTotalCost = cart[item].price * cart[item].quantity;
+                totalCost += itemTotalCost;
+
+                let cartItemDiv = document.createElement('div');
+                cartItemDiv.classList.add('cart-item');
+
+                let decrementButtonHTML = cart[item].quantity > 1 
+                    ? `<button onclick="decreaseItemQuantity('${item}')">-</button>`
+                    : `<button class="delete-icon" onclick="removeFromCart('${item}')">🗑️</button>`;
+
+                cartItemDiv.innerHTML = `
+                    <span>${item} x ${cart[item].quantity} (${cart[item].price})</span>
+                    <span>₹${itemTotalCost.toFixed(2)}</span>
+                    <div class="item-controls">
+                        ${decrementButtonHTML}
+                        <button onclick="increaseItemQuantity('${item}')">+</button>
+                    </div>
+                `;
+                cartItemsDiv.appendChild(cartItemDiv);
+            }
+
+            totalCostSpan.innerText = totalCost.toFixed(2);
+            slideTotalSpan.innerText = totalCost.toFixed(2);
+            slideContainer.style.display = 'block';
+            addressSection.style.display = 'block';
+        }
+
+
+    document.getElementById('slideButton').addEventListener('input', function (e) {
+    const slideValue = e.target.value;
+    const slideToPayMessage = document.querySelector('.slide-to-pay-message');
+    this.style.background = `linear-gradient(to right, #33b50b ${slideValue}%, rgba(255, 255, 255, 0.6) ${slideValue}%)`;
+    
+   
+    if (slideValue < 100) {
+        slideToPayMessage.style.color = 'black'; 
+    } else {
+        slideToPayMessage.style.color = 'white'; 
+    }
+
+   
+    if (slideValue == 100) {
+        window.location.href = 'payment.html';
+    }
+});
+        function increaseItemQuantity(item) {
+            cart[item].quantity += 1;
+            localStorage.setItem('cart', JSON.stringify(cart));
+            displayCart();
+        }
+
+        function decreaseItemQuantity(item) {
+            if (cart[item].quantity > 1) {
+                cart[item].quantity -= 1;
+            } else {
+                delete cart[item];
+            }
+            localStorage.setItem('cart', JSON.stringify(cart));
+            displayCart();
+        }
+
+        function removeFromCart(item) {
+            delete cart[item];
+            localStorage.setItem('cart', JSON.stringify(cart));
+            displayCart();
+        }
+        window.onload = displayCart;
+    </script>
+</body>
+</html>

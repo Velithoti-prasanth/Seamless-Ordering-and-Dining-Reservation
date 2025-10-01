@@ -1,0 +1,326 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: whitesmoke;
+    font-family: Arial, sans-serif;
+    animation: fadeIn 0.2s ease-in-out;
+}
+.header {
+    text-align: center;
+    margin-top: 5%;
+}
+.header h1 {
+    margin: 5%;
+    color: orange;
+    font-size: 2.5em;
+    font-style: italic;
+    animation: slideIn 1s ease-in-out;
+}.parent {
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-evenly;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.child1, .child2, .child3, .child4, .child5 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s;
+}
+
+.child1:hover, .child2:hover, .child3:hover, .child4:hover, .child5:hover {
+    transform: scale(1.1);
+}
+
+.child1 h1, .child2 h1, .child3 h1, .child4 h1, .child5 h1 {
+    color: black;
+    font-size: 30px;
+    margin-top: 15%;
+}
+
+.child1 h2, .child2 h2, .child3 h2, .child4 h2, .child5 h2 {
+    color: rgb(106, 104, 104);
+    font-size: 15px;
+}
+
+.child1 img, .child2 img, .child3 img, .child4 img, .child5 img {
+    width: 100px;
+    height: 85px;
+    transition: transform 0.3s;
+}
+
+.child1 img:hover, .child2 img:hover, .child3 img:hover, .child4 img:hover, .child5 img:hover {
+    transform: rotate(360deg);
+}
+
+/* Specific adjustment for child3 */
+.child3 img {
+    width: 80px;
+}
+
+.bitems {
+    margin-top: 8%;
+    margin-left: 50px;
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    animation: fadeInUp 1s ease-in-out;
+}
+.bitemsimg img {
+    width: 130px;
+    height: 84px;
+    border: 1px solid rgb(3, 3, 3);
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 0 10px rgb(235, 57, 18);
+    
+}
+.bitemsimg img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgb(235, 57, 18);
+}
+.bitemsimg h1 {
+    color: black;
+    margin-left: -175px;
+    margin-top: -100px;
+}
+.bitemsimg p {
+    color: black;
+    font-size: 13px;
+    margin-left: 17px;
+}
+.cost {
+    display: block;
+    margin-top: 25px;
+    margin-left: 20px;
+    font-size: 20px;
+}
+.cost img {
+    border: none;
+    width: 40px;
+    height: 30px;
+    margin-right: -5px;
+    margin-top: -5px;
+}
+.cost h2{
+    color: orange;
+ 
+    font-size: 27px;
+}
+.menu-content {
+    margin-left: 30px;
+    margin-right: 0.5%;
+    width: 400px;
+
+}
+.menu-content h1 {
+    color: orange;
+     
+}
+.menu-content p {
+    margin-bottom: 85px;
+    font-size: 13px;
+}
+.icon {
+    display: flex;
+    margin-bottom: 110px;
+}
+a {
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+}
+a button {
+    width: 150px;
+    height: 35px;
+   justify-items: center;
+    color: black;
+    background-color: orange;
+    border: none;
+    box-shadow: 1px 1px 10px rgb(26, 217, 255);
+    border-radius: 19px;
+    transition: background-color 0.3s, transform 0.3s;
+  margin: 40px;
+  margin-left: 7%;
+}
+a button:hover {
+    background-color: rgb(7, 238, 255);
+    transform: scale(1.1);
+    color: white;
+    box-shadow: 1px 1px 10px orange;
+}
+.litems {
+    margin-top: 8%;
+    margin-left: 50px;
+    display: flex;
+    justify-content: center;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+/* Keyframes for animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.parent .child1, .parent .child2, .parent .child3,.parent .child4,.parent .child5 {
+    position: relative;
+    cursor: pointer;
+}
+
+.parent .child1.active .headings h1::after,
+.parent .child2.active .headings h1::after,
+.parent .child3.active .headings h1::after,
+.parent .child4.active .headings h1::after,
+.parent .child5.active .headings h1::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: #ff6600; /* Your preferred color */
+    left: 0;
+    bottom: -10px;
+    animation: underline-animation 0.4s ease forwards;
+}
+
+@keyframes underline-animation {
+    from {
+        width: 0;
+        left: 50%;
+    }
+    to {
+        width: 100%;
+        left: 0;
+    }
+}
+
+
+.ditems{
+    margin-top: 8%;
+    margin-left: 50px;
+    display: flex;
+    justify-content: center;
+    animation: fadeInUp 1s ease-in-out;
+}
+.sitems{
+    
+    width: 60%;
+    margin-top: 8%;
+    margin-left: 20%;  
+    display: flex;
+    justify-content: center;
+    animation: fadeInUp 1s ease-in-out;
+    
+}
+.citems{
+    
+    width: 60%;
+    margin-top: 8%;
+    margin-left: 20%;  
+    display: flex;
+    justify-content: center;
+    animation: fadeInUp 1s ease-in-out;
+    
+}
+
+.order-controls {
+    position: relative;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+    padding: 5px 10px;
+    border-radius: 20px;
+    color: black;
+    font-size: 16px;
+    min-width: 100px; /* Ensure the width remains constant */
+}
+
+.add-button, .counter {
+    display: inline-flex;
+    align-items: center;
+}
+
+.counter {
+    display: none;
+    color: rgb(255, 255, 255);
+}
+
+.order-controls button {
+    background:  #db5800;
+    height: 25px;
+    border: 1px black solid;
+    color: rgb(245, 243, 243);
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 25%;
+    font-size: 16px;
+   
+    box-shadow:0 0 10px black ;
+    margin: 0 5px;
+    transition: background-color 0.3s ease;
+}
+
+.order-controls button:hover {
+    background-color: #e64a19;
+}
+.cart{
+    background-color: hwb(147 13% 21%);
+    width: 30%;
+    height: 30px;
+    margin-left: auto;
+    margin-right:auto ;
+    padding: 10px;
+    padding-top: 15px;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 10px;
+}
+.cart,h1,h2{
+    text-decoration: none;
+    color: white;
+}
+.cart button{
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 16px;
+}
+.cart h1{
+    font-size: 16px;
+}
+.cart button,h2{
+    cursor: pointer;
+}

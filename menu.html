@@ -1,0 +1,894 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="menu.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <section class="menu">
+        <!--menu header-->
+        <div class="header">
+            <h1>Menu</h1>
+            <div class="parent">
+                <div class="child1">
+                    <img src="images/breakfast.webp" alt="">
+                    <div class="headings">
+                        <h1>Popular</h1>
+                        <h2>Breakfast</h2>
+                    </div>
+                </div>
+                <div class="child2">
+                    <img src="images/lunch.png" alt="">
+                    <div class="headings">
+                        <h1>Special</h1>
+                        <h2>Lunch</h2>
+                    </div>
+                </div>
+                <div class="child3">
+                    <img src="images/dinner.webp" alt="">
+                    <div class="headings">
+                        <h1>Lovely</h1>
+                        <h2>Dinner</h2>
+                    </div>
+                </div>
+                <div class="child4">
+                    <img src="images/snaks.png" alt="">
+                    <div class="headings">
+                        <h1>spicy</h1>
+                        <h2>Snacks</h2>
+                    </div>
+                </div>
+                <div class="child5">
+                    <img src="images/clogo.webp" alt="">
+                    <div class="headings">
+                        <h1>Summer</h1>
+                        <h2>CoolDrinks</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--breakfast-->
+        <div class="bitems">
+            <div class="bitemsimg">
+                <img src="images/bitem1.jpg" alt="">
+                <div class="order-controls">
+                    <button class="add-button" onclick="addItem(this, 'Sambhar Idly', 50)">Add</button>
+                    <div class="counter">
+                        <button class="decrease"   onclick="changeCount(this, 'Sambhar Idly', -1, 50)">-</button>
+                        <span>1</span>
+                        <button class="increase"  onclick="changeCount(this, 'Sambhar Idly', 1, 50)">+</button>
+                    </div>
+                </div>
+                <br>
+                <img src="images/bitem2.jpg" alt="">
+                <div class="order-controls">
+                    <button class="add-button"  onclick="addItem(this, 'Dosa', 60)">Add</button>
+                    <div class="counter">
+                        <button class="decrease"  onclick="changeCount(this, 'Dosa', -1, 60)">-</button>
+                        <span>1</span>
+                        <button class="increase"  onclick="changeCount(this, 'Dosa', 1, 60)">+</button>
+                    </div>
+                </div>
+                <br>
+                <img src="images/bitem3.jpg" alt="">
+                <div class="order-controls">
+                    <button class="add-button"  onclick="addItem(this, 'Upma', 40)">Add</button>
+                    <div class="counter">
+                        <button class="decrease"  onclick="changeCount(this, 'upma', -1, 40)">-</button>
+                        <span>1</span>
+                        <button class="increase"  onclick="changeCount(this, 'upma', 1, 40)">+</button>
+                    </div>
+                </div>
+                <br>
+                <img src="images/bitem4.jpg" alt="">
+                <div class="order-controls">
+                    <button class="add-button"  onclick="addItem(this, 'Vada', 40)">Add</button>
+                    <div class="counter">
+                        <button class="decrease"  onclick="changeCount(this, 'Vada', -1, 40)">-</button>
+                        <span>1</span>
+                        <button class="increase"  onclick="changeCount(this, 'Vada', 1, 40)">+</button>
+                    </div>
+                </div>
+                <br>
+                <img src="images/bitem5.jpg" alt="">
+                <div class="order-controls">
+                    <button class="add-button"  onclick="addItem(this, 'Poha', 80)">Add</button>
+                    <div class="counter">
+                        <button class="decrease"  onclick="changeCount(this, 'Poha', -1, 80)">-</button>
+                        <span>1</span>
+                        <button class="increase"  onclick="changeCount(this, 'Poha', 1, 80)">+</button>
+                    </div>
+                </div>
+                <br>
+                <img src="images/bitem6.jpg" alt="">
+                <div class="order-controls">
+                    <button class="add-button"  onclick="addItem(this, 'Poori', 50)">Add</button>
+                    <div class="counter">
+                        <button class="decrease"  onclick="changeCount(this, 'Poori', -1, 50)">-</button>
+                        <span>1</span>
+                        <button class="increase"  onclick="changeCount(this, 'Poori', 1, 50)">+</button>
+                    </div>
+                </div>
+                <br>
+                <img src="images/bitem7.jpg" alt="">
+                <div class="order-controls">
+                    <button class="add-button"  onclick="addItem(this, 'Mysore Bonda', 40)">Add</button>
+                    <div class="counter">
+                        <button class="decrease"  onclick="changeCount(this, 'Mysore Bonda', -1, 40)">-</button>
+                        <span>1</span>
+                        <button class="increase"  onclick="changeCount(this, 'Mysore Bonda', 1, 40)">+</button>
+                    </div>
+                </div>
+                <br>
+                <img src="https://srinivasabhavan.com/wp-content/uploads/2024/11/chapathi.jpg" alt=""> 
+                <div class="order-controls">
+                    <button class="add-button"  onclick="addItem(this, 'Mysore Bonda', 40)">Add</button>
+                    <div class="counter">
+                        <button class="decrease"  onclick="changeCount(this, 'Mysore Bonda', -1, 40)">-</button>
+                        <span>1</span>
+                        <button class="increase"  onclick="changeCount(this, 'Mysore Bonda', 1, 40)">+</button>
+                    </div>
+                </div>
+                
+                
+            </div>
+            <div class="menu-content">
+                <h1>Idli Sambar</h1>
+                <p>soft steamed rice cakes served with a flavoural lentil soup.</p>
+                <h1>Dosa</h1>
+                <p>Crispy crepes made from fermented rice filled with spiced potatoes.</p>
+                <h1>Upma</h1>
+                <p>Cooked with vegetables,mustard seeds, and curry leaves.</p>
+                <h1>vada</h1>
+                <p>Crispy on the outside and soft inside, served with chutney and sambar.</p>
+                <h1>Poha</h1>
+                <p>Flattened rice cooked with mustard seeds, turmeric,and garnished with lemon.</p>
+                <h1>poori</h1>
+                <p>poori is a round,golden,puffed,fried indian bread made from whole wheat flour.</p>
+                <h1>Mysore Bonds</h1>
+                <p>Mysore Bonda is a crispy,deep-fried south indian snack enjoyed with cocnut chutney.</p>
+                <h1>Chapathi</h1>
+                <p>Chapathis are one of the most common forms of wheat bread, a staple food in the Indian Subcontinent.</p>
+            </div>
+            <div class="cost">
+                <div class="icon">
+                    <img src="images/currency.png" alt="">
+                    <h2>50</h2>
+                </div>
+                <div class="icon">
+                   <img src="images/currency.png" alt="">
+                    <h2>60</h2>
+                </div>
+                <div class="icon">
+                   <img src="images/currency.png" alt="">
+                    <h2>40</h2>
+                </div>
+                <div class="icon">
+                    <img src="images/currency.png" alt="">
+                    <h2>40</h2>
+                </div>
+                <div class="icon">
+                   <img src="images/currency.png" alt="">
+                    <h2>80</h2>
+                </div>
+                <div class="icon">
+                    <img src="images/currency.png" alt="">
+                    <h2>50</h2>
+                </div>
+                <div class="icon">
+                    <img src="images/currency.png" alt="">
+                    <h2>40</h2>
+                </div>
+                <div class="icon">
+                    <img src="images/currency.png" alt="">
+                    <h2>50</h2>
+                </div>
+            </div>
+        </div>
+        <!--lunch-->
+        <div class="litems">
+            <div class="bitemsimg">
+                <img src="images/litem1.jpg" alt="">
+                <div class="order-controls">
+                    <button class="add-button" onclick="addItem(this, 'Andhra Chicken Biryani', 299)">Add</button>
+                    <div class="counter">
+                        <button class="decrease"   onclick="changeCount(this, 'Andhra Chicken Biryani', -1, 299)">-</button>
+                        <span>1</span>
+                        <button class="increase"  onclick="changeCount(this, 'Andhra Chicken Biryani', 1, )">+</button>
+                    </div>
+                </div>
+                <br>
+                <img src="images/litem2.jpg" alt="">
+                <div class="order-controls">
+                    <button class="add-button" onclick="addItem(this, 'Chepala Pulusu', 399)">Add</button>
+                    <div class="counter">
+                        <button class="decrease"   onclick="changeCount(this, 'Chepala Pulusu', -1, 399)">-</button>
+                        <span>1</span>
+                        <button class="increase"  onclick="changeCount(this, 'Chepala Pulusu', 1, 399)">+</button>
+                    </div>
+                </div>
+                <br>
+                <img src="images/litem3.jpg" alt="">
+                <div class="order-controls">
+                    <button class="add-button" onclick="addItem(this, 'Gongura Mutton', 399)">Add</button>
+                    <div class="counter">
+                        <button class="decrease"   onclick="changeCount(this, 'Gongura Mutton', -1, 399)">-</button>
+                        <span>1</span>
+                        <button class="increase"  onclick="changeCount(this, 'Gongura Mutton', 1, 399)">+</button>
+                    </div>
+                </div>
+                <br>
+                <img src="images/litem4.jpg" alt="">
+                <div class="order-controls">
+                    <button class="add-button" onclick="addItem(this, 'Kodi Vepudu', 249)">Add</button>
+                    <div class="counter">
+                        <button class="decrease"   onclick="changeCount(this, 'Kodi Vepudu', -1, 249)">-</button>
+                        <span>1</span>
+                        <button class="increase"  onclick="changeCount(this, 'Kodi Vepudu', 1, 249)">+</button>
+                    </div>
+                </div>
+                <br>
+                <img src="images/litem5.jpg" alt="">
+                <div class="order-controls">
+                    <button class="add-button" onclick="addItem(this, 'Royyala Pulusu', 449)">Add</button>
+                    <div class="counter">
+                        <button class="decrease"   onclick="changeCount(this, 'Royyala Pulusu', -1, 449)">-</button>
+                        <span>1</span>
+                        <button class="increase"  onclick="changeCount(this, 'Royyala Pulusu', 1, 449)">+</button>
+                    </div>
+                </div>
+                <br>
+                <img src="images/litem6.jpg" alt="">
+                <div class="order-controls">
+                    <button class="add-button" onclick="addItem(this, 'Mutton Kheema', 499)">Add</button>
+                    <div class="counter">
+                        <button class="decrease"   onclick="changeCount(this, 'Mutton Kheema', -1, 499)">-</button>
+                        <span>1</span>
+                        <button class="increase"  onclick="changeCount(this, 'Mutton Kheema', 1, 499)">+</button>
+                    </div>
+                </div>
+            <br>
+                <img src="images/litem7.jpg"alt="">
+                <div class="order-controls">
+                    <button class="add-button" onclick="addItem(this, 'Chicken 65', 239)">Add</button>
+                    <div class="counter">
+                        <button class="decrease"   onclick="changeCount(this, 'Chicken 65', -1, 239)">-</button>
+                        <span>1</span>
+                        <button class="increase"  onclick="changeCount(this, 'Chicken 65', 1, 239)">+</button>
+                    </div>
+                </div>
+                <br>
+                <img src="images/litem8.jpg" alt=""> 
+                <div class="order-controls">
+                    <button class="add-button" onclick="addItem(this, 'Natu Kodi Pulusu', 20000)">Add</button>
+                    <div class="counter">
+                        <button class="decrease"   onclick="changeCount(this, 'Natu Kodi Pulusu', -1, 20000)">-</button>
+                        <span>1</span>
+                        <button class="increase"  onclick="changeCount(this, 'Natu Kodi Pulusu', 1, 20000)">+</button>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="menu-content">
+                <h1>Andhra Chicken Biryani</h1>
+                <p>Aromatic rice dish with tender chicken pieces, spices, and fried onions.</p>
+                <h1>Chepala Pulusu</h1>
+                <p>Spicy fish curry cooked in tamarind sauce and assorted spices.</p>
+                <h1>Gongura Mutton</h1>
+                <p>Mutton cooked with tangy sorrel leaves and spices.</p>
+                <h1>Kodi Vepudu</h1>
+                <p>Spicy fried chicken with a crispy exterior and juicy interior.</p>
+                <h1>Royyala Pulusu</h1>
+                <p>Prawn curry with a rich, spicy gravy.</p>
+                <h1>Mutton Kheema</h1>
+                <p>Minced mutton cooked with spices and herbs.</p>
+                <h1>Chicken 65</h1>
+                <p>Deep-fried chicken pieces marinated in spices and yogurt.</p>
+                <h1>Natu Kodi Pulusu</h1>
+                <p>Country chicken curry with a spicy and tangy gravy.</p>
+            </div>
+            <div class="cost">
+                <div class="icon">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtiLu6733dwl9Z4V6p-UKlxnUpn65VtKpkIQ&s" alt="">
+                    <h2>299</h2>
+                </div>
+                <div class="icon">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtiLu6733dwl9Z4V6p-UKlxnUpn65VtKpkIQ&s" alt="">
+                    <h2>399</h2>
+                </div>
+                <div class="icon">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtiLu6733dwl9Z4V6p-UKlxnUpn65VtKpkIQ&s" alt="">
+                    <h2>399</h2>
+                </div>
+                <div class="icon">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtiLu6733dwl9Z4V6p-UKlxnUpn65VtKpkIQ&s" alt="">
+                    <h2>249</h2>
+                </div>
+                <div class="icon">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtiLu6733dwl9Z4V6p-UKlxnUpn65VtKpkIQ&s" alt="">
+                    <h2>449</h2>
+                </div>
+                <div class="icon">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtiLu6733dwl9Z4V6p-UKlxnUpn65VtKpkIQ&s" alt="">
+                    <h2>499</h2>
+                </div>
+                <div class="icon">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtiLu6733dwl9Z4V6p-UKlxnUpn65VtKpkIQ&s" alt="">
+                    <h2>239</h2>
+                </div>
+                <div class="icon">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtiLu6733dwl9Z4V6p-UKlxnUpn65VtKpkIQ&s" alt="">
+                    <h2>200</h2>
+                </div>
+            </div>
+        </div>
+        <!--dinner-->
+        <div class="ditems">
+            <div class="bitemsimg">
+                <img src="images/ditem1.jpg" alt="">
+                <div class="order-controls">
+                    <button class="add-button" onclick="addItem(this, 'Butter Chicken', 329)">Add</button>
+                    <div class="counter">
+                        <button class="decrease" onclick="changeCount(this, 'Butter Chicken', -1, 329)">-</button>
+                        <span>1</span>
+                        <button class="increase" onclick="changeCount(this, 'Butter Chicken', 1, 329)">+</button>
+                    </div>
+                </div><br>
+                <img src="images/ditem2.jpg" alt="">
+                <div class="order-controls">
+                    <button class="add-button" onclick="addItem(this, 'Palak Paneer', 199)">Add</button>
+                    <div class="counter">
+                        <button class="decrease" onclick="changeCount(this, 'Palak Paneer', -1, 199)">-</button>
+                        <span>1</span>
+                        <button class="increase" onclick="changeCount(this, 'Palak Paneer', 1, 199)">+</button>
+                    </div>
+                </div><br>
+                <img src="images/ditem3.jpg" alt="">
+                <div class="order-controls">
+                    <button class="add-button" onclick="addItem(this, 'Vegetable Polav', 149)">Add</button>
+                    <div class="counter">
+                        <button class="decrease" onclick="changeCount(this, 'Vegetable Polav', -1, 149)">-</button>
+                        <span>1</span>
+                        <button class="increase" onclick="changeCount(this, 'Vegetable Polav', 1, 149)">+</button>
+                    </div>
+                </div><br>
+                <img src="images/ditem4.jpg" alt="">
+                <div class="order-controls">
+                    <button class="add-button" onclick="addItem(this, 'Kodi Polav', 329)">Add</button>
+                    <div class="counter">
+                        <button class="decrease" onclick="changeCount(this, 'Kodi Polav', -1, 329)">-</button>
+                        <span>1</span>
+                        <button class="increase" onclick="changeCount(this, 'Kodi Polav', 1, 329)">+</button>
+                    </div>
+                </div><br>
+                <img src="images/ditem5.jpg" alt="">
+                <div class="order-controls">
+                    <button class="add-button" onclick="addItem(this, 'Gutti Vankaya', 199)">Add</button>
+                    <div class="counter">
+                        <button class="decrease" onclick="changeCount(this, 'Gutti Vankaya', -1, 199)">-</button>
+                        <span>1</span>
+                        <button class="increase" onclick="changeCount(this, 'Gutti Vankaya', 1, 199)">+</button>
+                    </div>
+                </div><br>
+                <img src="images/ditem6.jpg" alt="">
+                <div class="order-controls">
+                    <button class="add-button" onclick="addItem(this, 'Pesarttu', 99)">Add</button>
+                    <div class="counter">
+                        <button class="decrease" onclick="changeCount(this, 'Pesarttu', -1, 99)">-</button>
+                        <span>1</span>
+                        <button class="increase" onclick="changeCount(this, 'Pesarttu', 1, 99)">+</button>
+                    </div>
+                </div><br>
+                <img src="images/ditem7.jpg" alt="">
+                <div class="order-controls">
+                    <button class="add-button" onclick="addItem(this, 'Curd Rice', 120)">Add</button>
+                    <div class="counter">
+                        <button class="decrease" onclick="changeCount(this, 'Curd Rice', -1, 120)">-</button>
+                        <span>1</span>
+                        <button class="increase" onclick="changeCount(this, 'Curd Rice', 1, 120)">+</button>
+                    </div>
+                </div><br>
+                <img src="images/ditem8.jpg" alt="">
+                <div class="order-controls">
+                    <button class="add-button" onclick="addItem(this, 'Muddha Papu Avakaya', 139)">Add</button>
+                    <div class="counter">
+                        <button class="decrease" onclick="changeCount(this, 'Muddha Papu Avakaya', -1, 139)">-</button>
+                        <span>1</span>
+                        <button class="increase" onclick="changeCount(this, 'Muddha Papu Avakaya', 1, 139)">+</button>
+                    </div>
+                </div><br>
+                <img src="images/panner.webp" alt="">
+                <div class="order-controls">
+                    <button class="add-button" onclick="addItem(this, 'Paneer Kulcha', 159)">Add</button>
+                    <div class="counter">
+                        <button class="decrease" onclick="changeCount(this, 'Paneer Kulcha', -1, 159)">-</button>
+                        <span>1</span>
+                        <button class="increase" onclick="changeCount(this, 'Paneer Kulcha', 1, 159)">+</button>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-content">
+                <h1>Butter Chicken</h1>
+                <p>Marinated chicken cooked in a creamy tomato sauce, rich with butter and spices.</p>
+                <h1>Palak Paneer</h1>
+                <p>Paneer cubes cooked in a smooth spinach gravy, flavored with garlic and spices.</p>
+                <h1>Vegetable Pulav</h1>
+                <p>Fragrant rice cooked with mixed vegetables, spices, and garnished with fried onions and nuts.</p>
+                <h1>Kodi Pulav</h1>
+                <p>A flavorful chicken pulao made with basmati rice, tender chicken, and aromatic spices, often served with raita.</p>
+                <h1>Gutti Vankaya</h1>
+                <p>Stuffed eggplant curry with roasted herbs and spices.</p>
+                <h1>Pesarttu</h1>
+                <p>A savory crepe made from green gram, often served with ginger chutney.</p>
+                <h1>Curd Rice</h1>
+                <p>A comforting dish made with cooked rice and yogurt seasoned with spices and herbs.</p>
+                <h1>Mudha Pappu Avakaya</h1>
+                <p>Simple mashed toor dal served with Andhra mango pickle.</p>
+                <h1>Paneer Kulcha</h1>
+                <p>This recipe has a spiced, savory, and lightly tangy paneer filling, making for a crisp and soft tender flatbread.</p>
+            </div>
+            <div class="cost">
+                <div class="icon">
+                    <img src="images/currency.png" alt="">
+                    <h2>329</h2>
+                </div>
+                <div class="icon">
+                    <img src="images/currency.png" alt="">
+                    <h2>199</h2>
+                </div>
+                <div class="icon">
+                    <img src="images/currency.png" alt="">
+                    <h2>149</h2>
+                </div>
+                <div class="icon">
+                    <img src="images/currency.png" alt="">
+                    <h2>329</h2>
+                </div>
+                <div class="icon">
+                    <img src="images/currency.png" alt="">
+                    <h2>199</h2>
+                </div>
+                <div class="icon">
+                    <img src="images/currency.png" alt="">
+                    <h2>99</h2>
+                </div>
+                <div class="icon">
+                    <img src="images/currency.png" alt="">
+                    <h2>120</h2>
+                </div>
+                <div class="icon">
+                    <img src="images/currency.png" alt="">
+                    <h2>139</h2>
+                </div>
+                <div class="icon">
+                    <img src="images/currency.png" alt="">
+                    <h2>159</h2>
+                </div>
+            </div>
+        </div>
+        <!-- snacks -->
+        <div class="sitems">
+            <div class="bitemsimg">
+                <img src="images/sitem1.jpg" alt="">
+                <div class="order-controls">
+                    <button class="add-button" onclick="addItem(this, 'Noodles', 150)">Add</button>
+                    <div class="counter">
+                        <button class="decrease" onclick="changeCount(this, 'Noodles', -1, 150)">-</button>
+                        <span>1</span>
+                        <button class="increase" onclick="changeCount(this, 'Noodles', 1, 150)">+</button>
+                    </div>
+                </div><br>
+                <img src="images/pizza.webp" alt="">
+                <div class="order-controls">
+                    <button class="add-button" onclick="addItem(this, 'Pizza', 299)">Add</button>
+                    <div class="counter">
+                        <button class="decrease" onclick="changeCount(this, 'Pizza', -1, 299)">-</button>
+                        <span>1</span>
+                        <button class="increase" onclick="changeCount(this, 'Pizza', 1, 299)">+</button>
+                    </div>
+                </div><br>
+                <img src="images/sitem6.jpg" alt="">
+                <div class="order-controls">
+                    <button class="add-button" onclick="addItem(this, 'Burger', 199)">Add</button>
+                    <div class="counter">
+                        <button class="decrease" onclick="changeCount(this, 'Burger', -1, 199)">-</button>
+                        <span>1</span>
+                        <button class="increase" onclick="changeCount(this, 'Burger', 1, 199)">+</button>
+                    </div>
+                </div><br>
+                <img src="images/download.webp" alt="">
+                <div class="order-controls">
+                    <button class="add-button" onclick="addItem(this, 'Samosa', 99)">Add</button>
+                    <div class="counter">
+                        <button class="decrease" onclick="changeCount(this, 'Samosa', -1, 99)">-</button>
+                        <span>1</span>
+                        <button class="increase" onclick="changeCount(this, 'Samosa', 1, 99)">+</button>
+                    </div>
+                </div><br>
+                <img src="images/french-fry.jpg" alt="">
+                <div class="order-controls">
+                    <button class="add-button" onclick="addItem(this, 'French Fries', 120)">Add</button>
+                    <div class="counter">
+                        <button class="decrease" onclick="changeCount(this, 'French Fries', -1, 120)">-</button>
+                        <span>1</span>
+                        <button class="increase" onclick="changeCount(this, 'French Fries', 1, 120)">+</button>
+                    </div>
+                </div><br>
+                <img src="images/role.jpg" alt="">
+                <div class="order-controls">
+                    <button class="add-button" onclick="addItem(this, 'Spring Rolls', 150)">Add</button>
+                    <div class="counter">
+                        <button class="decrease" onclick="changeCount(this, 'Spring Rolls', -1, 150)">-</button>
+                        <span>1</span>
+                        <button class="increase" onclick="changeCount(this, 'Spring Rolls', 1, 150)">+</button>
+                    </div>
+                </div><br>
+                <img src="images/chiken.webp" alt="">
+                <div class="order-controls">
+                    <button class="add-button" onclick="addItem(this, 'Chicken Wings', 199)">Add</button>
+                    <div class="counter">
+                        <button class="decrease" onclick="changeCount(this, 'Chicken Wings', -1, 199)">-</button>
+                        <span>1</span>
+                        <button class="increase" onclick="changeCount(this, 'Chicken Wings', 1, 199)">+</button>
+                    </div>
+                </div><br>
+                <img src="images/cheese.webp" alt="">
+                <div class="order-controls">
+                    <button class="add-button" onclick="addItem(this, 'Cheese Sticks', 139)">Add</button>
+                    <div class="counter">
+                        <button class="decrease" onclick="changeCount(this, 'Cheese Sticks', -1, 139)">-</button>
+                        <span>1</span>
+                        <button class="increase" onclick="changeCount(this, 'Cheese Sticks', 1, 139)">+</button>
+                    </div>
+                </div><br>
+            </div>
+            <div class="menu-content">
+                <h1>Noodles</h1>
+                <p>Stir-fried noodles tossed with vegetables and soy sauce.</p>
+                <h1>Pizza</h1>
+                <p>A classic dish topped with mozzarella cheese, pepperoni, and a tangy tomato sauce.</p>
+                <h1>Burger</h1>
+                <p>Juicy beef or chicken patty served in a soft bun with lettuce, tomato, and cheese.</p>
+                <h1>Samosa</h1>
+                <p>Crispy pastry filled with spiced potatoes and peas.</p>
+                <h1>French Fries</h1>
+                <p>Crispy golden fries seasoned with salt.</p>
+                <h1>Spring Rolls</h1>
+                <p>Crunchy rolls filled with vegetables or meat.</p>
+                <h1>Chicken Wings</h1>
+                <p>Spicy and crispy wings served with a side of dipping sauce.</p>
+                <h1>Cheese Sticks</h1>
+                <p>Fried cheese sticks served with marinara sauce.</p>
+            </div>
+            <div class="cost">
+                <div class="icon">
+                    <img src="images/currency.png" alt="">
+                    <h2>150</h2>
+                </div>
+                <div class="icon">
+                    <img src="images/currency.png" alt="">
+                    <h2>299</h2>
+                </div>
+                <div class="icon">
+                    <img src="images/currency.png" alt="">
+                    <h2>199</h2>
+                </div>
+                <div class="icon">
+                    <img src="images/currency.png" alt="">
+                    <h2>99</h2>
+                </div>
+                <div class="icon">
+                    <img src="images/currency.png" alt="">
+                    <h2>120</h2>
+                </div>
+                <div class="icon">
+                    <img src="images/currency.png" alt="">
+                    <h2>150</h2>
+                </div>
+                <div class="icon">
+                    <img src="images/currency.png" alt="">
+                    <h2>199</h2>
+                </div>
+                <div class="icon">
+                    <img src="images/currency.png" alt="">
+                    <h2>139</h2>
+                </div>
+            </div>
+        </div>
+        
+        </div>
+        <!-- cooldrinks -->
+       
+          
+        <div class="citems">
+            <div class="bitemsimg">
+                <img src="images/citem0.webp" alt="">
+                <div class="order-controls">
+                    <button class="add-button" onclick="addItem(this, 'Lemonade', 150)">Add</button>
+                    <div class="counter">
+                        <button class="decrease" onclick="changeCount(this, 'Lemonade', -1, 150)">-</button>
+                        <span>1</span>
+                        <button class="increase" onclick="changeCount(this, 'Lemonade', 1, 150)">+</button>
+                    </div>
+                </div><br>
+                
+                <img src="images/citem2.jpg" alt="">
+                <div class="order-controls">
+                    <button class="add-button" onclick="addItem(this, 'Mango smoothie', 120)">Add</button>
+                    <div class="counter">
+                        <button class="decrease" onclick="changeCount(this, 'Mango smoothie', -1, 120)">-</button>
+                        <span>1</span>
+                        <button class="increase" onclick="changeCount(this, 'Mango smoothie', 1, 120)">+</button>
+                    </div>
+                </div><br>
+                
+                <img src="images/citem3.jpg" alt="">
+                <div class="order-controls">
+                    <button class="add-button" onclick="addItem(this, 'Jaljeera', 175)">Add</button>
+                    <div class="counter">
+                        <button class="decrease" onclick="changeCount(this, 'Jaljeera', -1, 175)">-</button>
+                        <span>1</span>
+                        <button class="increase" onclick="changeCount(this, 'Jaljeera', 1, 175)">+</button>
+                    </div>
+                </div><br>
+                
+                <img src="images/citem4.jpg" alt="">
+                <div class="order-controls">
+                    <button class="add-button" onclick="addItem(this, 'Butter Milk', 60)">Add</button>
+                    <div class="counter">
+                        <button class="decrease" onclick="changeCount(this, 'Butter Milk', -1, 60)">-</button>
+                        <span>1</span>
+                        <button class="increase" onclick="changeCount(this, 'Butter Milk', 1, 60)">+</button>
+                    </div>
+                </div><br>
+                
+                <img src="images/citem5.jpg" alt="">
+                <div class="order-controls">
+                    <button class="add-button" onclick="addItem(this, 'Iced Tea', 200)">Add</button>
+                    <div class="counter">
+                        <button class="decrease" onclick="changeCount(this, 'Iced Tea', -1, 200)">-</button>
+                        <span>1</span>
+                        <button class="increase" onclick="changeCount(this, 'Iced Tea', 1, 200)">+</button>
+                    </div>
+                </div><br>
+                
+                <img src="images/citem6.jpg" alt="">
+                <div class="order-controls">
+                    <button class="add-button" onclick="addItem(this, 'Sugarcane Juice', 150)">Add</button>
+                    <div class="counter">
+                        <button class="decrease" onclick="changeCount(this, 'Sugarcane Juice', -1, 150)">-</button>
+                        <span>1</span>
+                        <button class="increase" onclick="changeCount(this, 'Sugarcane Juice', 1, 150)">+</button>
+                    </div>
+                </div><br>
+                
+                <img src="images/citem7.jpg" alt="">
+                <div class="order-controls">
+                    <button class="add-button" onclick="addItem(this, 'Lassi', 75)">Add</button>
+                    <div class="counter">
+                        <button class="decrease" onclick="changeCount(this, 'Lassi', -1, 75)">-</button>
+                        <span>1</span>
+                        <button class="increase" onclick="changeCount(this, 'Lassi', 1, 75)">+</button>
+                    </div>
+                </div><br>
+                
+                <img src="images/citem8.jpg" alt="">
+                <div class="order-controls">
+                    <button class="add-button" onclick="addItem(this, 'Watermelon Juice', 60)">Add</button>
+                    <div class="counter">
+                        <button class="decrease" onclick="changeCount(this, 'Watermelon Juice', -1, 60)">-</button>
+                        <span>1</span>
+                        <button class="increase" onclick="changeCount(this, 'Watermelon Juice', 1, 60)">+</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="menu-content">
+                <h1>Lemonade</h1>
+                <p>A homemade drink using lemon juice, water, and a sweetener such as honey.</p>
+                <h1>Mango Smoothie</h1>
+                <p>This ultra creamy mango smoothie is the best summertime smoothie.</p>
+                <h1>Jaljeera</h1>
+                <p>Jaljeera is a nutritious drink for keeping the body cool in summers.</p>
+                <h1>Butter Milk</h1>
+                <p>Pav bhaji is a spiced mixture of mashed vegetables in a thick gravy served with bread.</p>
+                <h1>Iced Tea</h1>
+                <p>It contains compounds like EGCG, leading to increased calorie burning.</p>
+                <h1>Sugar Cane Juice</h1>
+                <p>The second best beverage to cool and hydrate our bodies during the summer is sugarcane juice.</p>
+                <h1>Lassi</h1>
+                <p>Lassi is a Punjabi yogurt-based beverage with a smoothie-like consistency.</p>
+                <h1>Watermelon Juice</h1>
+                <p>Watermelon juice is so simple to make with a blender.</p>
+            </div>
+            
+            <div class="cost">
+                <div class="icon">
+                    <img src="images/currency.png" alt="">
+                    <h2>150</h2>
+                </div>
+                <div class="icon">
+                    <img src="images/currency.png" alt="">
+                    <h2>120</h2>
+                </div>
+                <div class="icon">
+                    <img src="images/currency.png" alt="">
+                    <h2>175</h2>
+                </div>
+                <div class="icon">
+                    <img src="images/currency.png" alt="">
+                    <h2>60</h2>
+                </div>
+                <div class="icon">
+                    <img src="images/currency.png" alt="">
+                    <h2>200</h2>
+                </div>
+                <div class="icon">
+                    <img src="images/currency.png" alt="">
+                    <h2>150</h2>
+                </div>
+                <div class="icon">
+                    <img src="images/currency.png" alt="">
+                    <h2>75</h2>
+                </div>
+                <div class="icon">
+                    <img src="images/currency.png" alt="">
+                    <h2>60</h2>
+                </div>
+            </div>
+        </div>
+        <div class="cart"> 
+                <h1> (<span id="cart-count">0</span>)Item added</h1>
+                 <div class="cart-button" onclick="goToCart()"><h2>view cart <i class="fa-sharp-duotone fa-solid fa-arrow-right fa-beat-fade"></i></h2></div> 
+              </div>
+            </div>
+        </div>
+        <a href="landing.html"> <button>Home</button></a>
+    </section>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+    const child1 = document.querySelector(".child1");
+    const child2 = document.querySelector(".child2");
+    const child3 = document.querySelector(".child3");
+    const child4 = document.querySelector(".child4");
+    const child5 = document.querySelector(".child5");
+
+    const bitems = document.querySelector(".bitems");
+    const litems = document.querySelector(".litems");
+    const ditems = document.querySelector(".ditems");
+    const sitems = document.querySelector(".sitems");
+    const citems = document.querySelector(".citems");
+
+
+  
+    bitems.style.display = "flex";
+    litems.style.display = "none";
+    ditems.style.display = "none";
+    sitems.style.display = "none";
+    citems.style.display = "none";
+
+    child1.classList.add("active");
+
+    child1.addEventListener("click", function() {
+        bitems.style.display = "flex";
+        litems.style.display = "none";
+        ditems.style.display = "none";
+        sitems.style.display = "none";
+        citems.style.display = "none";
+        child1.classList.add("active");
+        child2.classList.remove("active");
+        child3.classList.remove("active");
+        child4.classList.remove("active");
+        child5.classList.remove("active");
+    });
+
+    child2.addEventListener("click", function() {
+        bitems.style.display = "none";
+        litems.style.display = "flex";
+        ditems.style.display = "none";
+        sitems.style.display = "none";
+        citems.style.display = "none";
+        child1.classList.remove("active");
+        child2.classList.add("active");
+        child3.classList.remove("active");
+        child4.classList.remove("active");
+        child5.classList.remove("active");
+    });
+
+    child3.addEventListener("click", function() {
+        bitems.style.display = "none";
+        litems.style.display = "none";
+        ditems.style.display = "flex";
+        sitems.style.display = "none";
+        citems.style.display = "none";
+        child1.classList.remove("active");
+        child2.classList.remove("active");
+        child3.classList.add("active");
+        child4.classList.remove("active");
+        child5.classList.remove("active");
+    });
+    child4.addEventListener("click", function() {
+        bitems.style.display = "none";
+        litems.style.display = "none";
+        ditems.style.display = "none";
+        sitems.style.display = "flex";
+        citems.style.display = "none";
+        child1.classList.remove("active");
+        child2.classList.remove("active");
+        child3.classList.remove("active");
+        child4.classList.add("active");
+        child5.classList.remove("active");
+    });
+    child5.addEventListener("click", function() {
+        bitems.style.display = "none";
+        litems.style.display = "none";
+        ditems.style.display = "none";
+        sitems.style.display = "none";
+        citems.style.display = "flex";
+        child1.classList.remove("active");
+        child2.classList.remove("active");
+        child3.classList.remove("active");
+        child4.classList.remove("active");
+        child5.classList.add("active");
+    });
+});
+let cart = JSON.parse(localStorage.getItem('cart')) || {};
+
+        function addItem(button, itemName, itemPrice) {
+            let parentDiv = button.parentElement;
+            let counterDiv = parentDiv.querySelector('.counter');
+            button.style.display = 'none';
+            counterDiv.style.display = 'flex';
+
+            if (!cart[itemName]) {
+                cart[itemName] = { price: itemPrice, quantity: 1 };
+            }
+            saveCartToLocalStorage();
+            updateCartCount();
+        }
+
+        function changeCount(button, itemName, delta, itemPrice) {
+            let counterDiv = button.parentElement;
+            let countSpan = counterDiv.querySelector('span');
+            let currentCount = parseInt(countSpan.innerText);
+            let newCount = currentCount + delta;
+
+            if (newCount <= 0) {
+                counterDiv.style.display = 'none';
+                counterDiv.previousElementSibling.style.display = 'block';
+                delete cart[itemName];
+            } else {
+                countSpan.innerText = newCount;
+                cart[itemName].quantity = newCount;
+            }
+            saveCartToLocalStorage();
+            updateCartCount();
+        }
+
+        function saveCartToLocalStorage() {
+            localStorage.setItem('cart', JSON.stringify(cart));
+        }
+
+        function updateCartCount() {
+            let totalCount = 0;
+            for (let item in cart) {
+                totalCount += cart[item].quantity;
+            }
+            document.getElementById('cart-count').innerText = totalCount;
+        }
+
+        function goToCart() {
+            window.location.href = 'cart.html';
+        }
+
+      
+        updateCartCount();
+
+
+
+    </script>
+</body>
+</html>

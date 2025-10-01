@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Success</title>
+    <link rel="stylesheet" href="contactsuccess.css">
+</head>
+<body>
+    <div class="container">
+        <div class="success-message">
+            <h1>Your Query Has Been Sent!</h1>
+            <p>Thank you for reaching out to us. We will get back to you as soon as possible.</p>
+            <a href="landing.html" class="btn">Go to Homepage</a>
+        </div>
+    </div>
+
+    <!-- Confetti Canvas -->
+    <canvas id="confetti-canvas"></canvas>
+
+    <!-- Confetti Script -->
+    <script src="confetti.js"></script>
+    <script>
+        // Start confetti when the page loads
+        window.onload = () => {
+            startConfetti();
+        };
+        function startConfetti() {
+    const canvas = document.getElementById('confetti-canvas');
+    const ctx = canvas.getContext('2d');
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    const confettiPieces = [];
+    const confettiCount = 150;
+    const colors = ['#FFD700', '#FFEC8B', '#DAA520']; // Shades of gold
+
+    function randomRange(min, max) {
+        return Math.random() * (max - min) + min;
+    }
+
+    function createConfetti() {
+        for (let i = 0; i < confettiCount; i++) {
+            confettiPieces.push({
+                x: randomRange(0, canvas.width),
+                y: randomRange(0, canvas.height),
+                size: randomRange(5, 10),
+                color: colors[Math.floor(Math.random() * colors.length)],
+                velocityX: randomRange(-2, 2),
+                velocityY: randomRange(2, 5),
+                rotation: randomRange(0, Math.PI * 2),
+                rotationSpeed: randomRange(0.02, 0.05),
+            });
+        }
+    }
+
+    function drawConfetti() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        confettiPieces.forEach((piece) => {
+            ctx.fillStyle = piece.color;
+            ctx.save();
+            ctx.translate(piece.x, piece.y);
+            ctx.rotate(piece.rotation);
+            ctx.fillRect(-piece.size / 2, -piece.size / 2, piece.size, piece.size);
+            ctx.restore();
+
+            piece.x += piece.velocityX;
+            piece.y += piece.velocityY;
+            piece.rotation += piece.rotationSpeed;
+
+            if (piece.y > canvas.height) {
+                piece.y = 0;
+                piece.x = randomRange(0, canvas.width);
+            }
+        });
+    }
+
+    function update() {
+        drawConfetti();
+        requestAnimationFrame(update);
+    }
+
+    createConfetti();
+    update();
+}
+
+// Adjust canvas size on window resize
+window.addEventListener('resize', () => {
+    const canvas = document.getElementById('confetti-canvas');
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+});
+
+    </script>
+</body>
+</html>

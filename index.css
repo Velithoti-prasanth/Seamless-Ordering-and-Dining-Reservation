@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   height: 100vh;
+    background-image:url('images/loginbg\ \(1\).jpg') ;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.1); 
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.3); 
+    padding: 30px;
+    text-align: center;
+    width: 350px;
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: white;
+}
+h3{
+    color:white;
+      text-align: center;
+}
+
+.button-container {
+    margin-bottom: 20px;
+}
+label{
+   color: white;
+    height: 10px;
+font-family: sans-serif;
+}
+.toggle-btn {
+    background-color: #f57c00;
+    color: white;
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.toggle-btn:hover {
+    background-color: #e06c00;
+}
+
+.form-container {
+    display: none;
+    text-align: left;
+}
+
+form {
+    margin-top: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+ 
+ 
+    font-size: 13px;
+}
+
+input {
+    width: 100%;
+    padding: 8px; 
+    font-size: 12px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+button[type="submit"] {
+    width: 100%;
+    background-color: #f57c00;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button[type="submit"]:hover {
+    background-color: #e06c00;
+}
+.back-btn {
+    background-color: #888;
+    color: white;
+    padding: 10px 20px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+}
+
+.back-btn:hover {
+    background-color: #666;
+}
+.input-error {
+    border: 2px solid red;
+}
+
+#passwordError {
+    color: red;
+    display: none;
+}

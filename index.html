@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In / Sign Up</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Welcome! Please select an option</h2>
+        <div class="button-container">
+            <button id="signinBtn" class="toggle-btn" onclick="showForm('signin')">Sign In</button>
+            <button id="signupBtn" class="toggle-btn" onclick="showForm('signup')">Sign Up</button>
+        </div>
+
+        <!-- Sign In Form -->
+        <div id="signinForm" class="form-container">
+            <h3>Sign In</h3>
+            <form onsubmit="signinRedirect(event)">
+                <label for="signinEmail">Email</label>
+                <input type="email" id="signinEmail" placeholder="Enter your email" required>
+
+                <label for="signinPassword">Password</label>
+                <input type="password" id="signinPassword" placeholder="Enter your password" required>
+
+                <button type="submit">Sign In</button>
+                <button type="button" class="back-btn" onclick="goBack()">Go Back</button>
+            </form>
+        </div>
+
+        <!-- Sign Up Form -->
+        <div id="signupForm" class="form-container">
+            <h3>Sign Up</h3>
+            <form onsubmit="signupRedirect(event)">
+                <label for="signupUsername">Username</label>
+                <input type="text" id="signupUsername" placeholder="Enter your username" required>
+
+                <label for="signupDOB">Date of Birth</label>
+                <input type="date" id="signupDOB" required>
+
+                <label for="signupEmail">Email</label>
+                <input type="email" id="signupEmail" placeholder="Enter your email" required>
+
+                <label for="signupPassword">Password</label>
+                <input type="password" id="signupPassword" placeholder="Enter your password" required>
+
+                <label for="signupConfirmPassword">Confirm Password</label>
+                <input type="password" id="signupConfirmPassword" placeholder="Confirm your password" required>
+
+                <label for="signupAddress">Address</label>
+                <input type="text" id="signupAddress" placeholder="Enter your address" required>
+
+                <label for="signupPhone">Phone Number</label>
+                <input type="tel" id="signupPhone" placeholder="Enter your phone number" required>
+
+                <div id="passwordError" style="color:red; display:none;">Passwords do not match!</div>
+
+                <button type="submit">Sign Up</button>
+                <button type="button" class="back-btn" onclick="goBack()">Go Back</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function showForm(formType) {
+            const signinForm = document.getElementById('signinForm');
+            const signupForm = document.getElementById('signupForm');
+            const buttonsContainer = document.querySelector('.button-container');
+            const welcomeMessage = document.querySelector('h2');
+
+            buttonsContainer.style.display = 'none';
+            welcomeMessage.style.display = 'none';
+
+            if (formType === 'signin') {
+                signinForm.style.display = 'block';
+                signupForm.style.display = 'none';
+            } else if (formType === 'signup') {
+                signinForm.style.display = 'none';
+                signupForm.style.display = 'block';
+            }
+        }
+
+        function goBack() {
+            const signinForm = document.getElementById('signinForm');
+            const signupForm = document.getElementById('signupForm');
+            const buttonsContainer = document.querySelector('.button-container');
+            const welcomeMessage = document.querySelector('h2');
+
+            signinForm.style.display = 'none';
+            signupForm.style.display = 'none';
+
+            buttonsContainer.style.display = 'block';
+            welcomeMessage.style.display = 'block';
+        }
+
+        function signinRedirect(event) {
+            event.preventDefault();
+            window.location.href = "landing.html";
+        }
+
+        function signupRedirect(event) {
+            event.preventDefault(); 
+            const password = document.getElementById('signupPassword').value;
+            const confirmPassword = document.getElementById('signupConfirmPassword').value;
+            const passwordError = document.getElementById('passwordError');
+            const passwordInput = document.getElementById('signupPassword');
+            const confirmPasswordInput = document.getElementById('signupConfirmPassword');
+
+            if (password !== confirmPassword) {
+                passwordError.style.display = 'block';
+                passwordInput.classList.add('input-error');
+                confirmPasswordInput.classList.add('input-error');
+                return;
+            } else {
+                passwordError.style.display = 'none';
+                passwordInput.classList.remove('input-error');
+                confirmPasswordInput.classList.remove('input-error');
+                window.location.href = "rsuccess.html";
+            }
+        }
+    </script>
+</body>
+</html>

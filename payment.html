@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Gateway</title>
+    <link rel="stylesheet" href="payment-methods.css">
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #e0f7fa; /* Light background to make shadow and form stand out */
+}
+
+.payment-container {
+    background-color: #ffffff;
+    border-radius: 10px;
+    border: 2px solid #111111; /* Added a border to the container */
+    box-shadow: 0 8px 100px rgba(0, 0, 0, 0.2); /* Stronger shadow for better visibility */
+    padding: 30px;
+    width: 350px;
+    text-align: center;
+}
+
+.payment-header {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.payment-logo {
+    font-size: 40px;
+    color: white;
+    background-color: #0080ff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h2 {
+    font-size: 22px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.payment-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-field {
+    margin-bottom: 15px;
+}
+
+.input-field label {
+    display: block;
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+.input-field input {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 2px solid #ccc; /* Thicker border */
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s ease; /* Smooth transition for border color */
+}
+
+.input-field input:focus {
+    border-color: #0080ff; /* Blue border on focus */
+}
+
+.input-group {
+    display: flex;
+    justify-content: space-between;
+}
+
+.input-group .input-field {
+    width: 48%;
+}
+
+button {
+    padding: 12px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #0080ff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth transition for button color */
+}
+
+button:hover {
+    background-color: #005bb5;
+}
+
+
+    </style>
+</head>
+<body>
+    <div class="payment-container">
+        <div class="payment-header">
+            <div class="payment-logo">P</div>
+        </div>
+        <h2>Payment Gateway</h2>
+        <form class="payment-form">
+            <div class="input-field">
+                <label for="card-holder">Card holder:</label>
+                <input type="text" id="card-holder" name="card-holder" placeholder="Coding Market">
+            </div>
+            <div class="input-field">
+                <label for="card-number">Card number:</label>
+                <input type="text" id="card-number" name="card-number" placeholder="5555 5555 5555 5555" minlength="12" maxlength="12">
+            </div>
+            <div class="input-group">
+                <div class="input-field">
+                    <label for="expiry-date">Expiry date:</label>
+                    <input type="text" id="expiry-date" name="expiry-date" placeholder="MM / YY">
+                </div>
+                <div class="input-field">
+                    <label for="cvc">CVC:</label>
+                    <input type="text" id="cvc" name="cvc" placeholder="000">
+                </div>
+            </div>
+            <button type="submit">Pay</button>
+        </form>
+    </div>
+</body>
+</html>

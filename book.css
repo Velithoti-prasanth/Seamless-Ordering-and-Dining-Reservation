@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-image: url('https://img.freepik.com/free-photo/people-taking-part-high-protocol-event_23-2150951471.jpg');
+    display: flex;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    animation: backgroundFade 5s infinite alternate;
+}
+
+
+.reservation-container {
+   background-color: transparent;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0  0 10px rgba(4, 4, 4, 0.1);
+    height: 100vh;
+    width: 400px;
+    max-width: 100%;
+    opacity: 0;
+    border: 2px solid rgb(255, 255, 255);
+    transform: translateY(-20px);
+    animation: fadeInUp 1s forwards;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+h1 {
+    text-align: center;
+    color: orange;
+   margin-top: 0px;
+   border-radius: 150px;
+   border: 1px solid white;
+
+    margin-bottom: 20px;
+    animation: textFadeIn 1s 0.5s forwards;
+    opacity: 0;
+}
+
+@keyframes textFadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 5px;
+    color:rgb(255, 255, 255);
+}
+
+input {
+    margin-bottom: 20px;
+    background-color: white;
+    padding: 10px;
+    height: 25px;
+   border: none;
+   border-radius: 20px;
+   
+    font-size: 16px;
+}
+
+button {
+    background-color: orange;
+    color: #fff;
+    margin-left: 30%;
+    padding: 10px;
+    margin-top: 10px;
+    border:1px solid #2df1ff;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 120px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color:blue;
+}
+
+button:focus {
+    outline: none;
+    animation: buttonPulse 0.5s;
+}
+
+@keyframes buttonPulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}

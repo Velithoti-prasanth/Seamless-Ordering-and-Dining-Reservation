@@ -1,0 +1,141 @@
+
+        /* Add your CSS styles here */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .success-card {
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+            animation: fadeIn 0.5s ease;
+        }
+
+        .success-icon {
+            font-size: 48px;
+            color: #4caf50;
+        }
+
+        .success-message {
+            font-size: 18px;
+            margin-top: 10px;
+        }
+
+        .continue-button {
+            background-color: #4caf50;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .continue-button:hover {
+            background-color: #45a049;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    
+        /*header styles*/
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('https://img.freepik.com/premium-photo/office-leather-desk-table-with-computer_10371-6.jpg?w=900');
+            background-position:left;
+            background-repeat: no-repeat;
+            background-size: cover;   
+          
+        }
+        /*header*/
+        .header {
+            background-color: #1a1a4f;
+            padding: 10px;
+            height: 60px;
+            text-align: center;
+            color: white;
+        }
+        .title button{
+            height: 35px;
+            width: 50px;
+            padding: 5px;
+            font-size: larger;
+            background-color:rgb(251, 16, 126);
+            font-weight: bold;
+            border-color: rgb(251, 16, 126);
+            border-width: 0px;
+            border-radius: 5px;
+        }
+        .header .title {
+            font-size: 24px;
+            margin-top: -15px;
+        }
+        .header .nav {
+            display: flex;
+            margin-top: 10px;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .nav .buttons a {
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            background-color: rgb(251, 16, 126);
+            border-radius: 5px;
+            margin: 0 5px;
+        }
+        a:is(:link,:active,:visited).active{
+            color: #ff4d4d;
+            background-color: white;
+        }
+        .nav .buttons a:hover {
+            background-color: #e60000;
+        }
+        /* Footer styles */
+.footer {
+    background-color: #1a1a4f;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 65px;
+}
+.footer p {
+    font-size: 10px;
+    margin: 0;
+}
+.footer .links, .footer .social {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(251, 16, 126);
+    width: 175px;
+    margin: 3px;
+    border-radius: 15px;
+}
+.footer .links a, .footer .social a {
+    color: white;
+    font-size: 10px;
+    text-decoration: none;
+    margin: 5px 0;
+}
+.footer .social a img {
+    width: 13px;
+    height: 13px;
+    margin-right: 5px;
+}
