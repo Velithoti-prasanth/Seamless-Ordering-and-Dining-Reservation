@@ -71,7 +71,7 @@ body {
 }
 .bitemsimg img {
     width: 130px;
-    height: 84px;
+    height: 85px;
     border: 1px solid rgb(3, 3, 3);
     border-radius: 10px;
     transition: transform 0.3s, box-shadow 0.3s;
@@ -121,7 +121,7 @@ body {
      
 }
 .menu-content p {
-    margin-bottom: 87px;
+    margin-bottom: 85px;
     font-size: 13px;
 }
 .icon {
@@ -325,3 +325,4 @@ a button:hover {
     cursor: pointer;
 
 }
+
