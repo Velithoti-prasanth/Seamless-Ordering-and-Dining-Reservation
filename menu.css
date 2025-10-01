@@ -121,7 +121,7 @@ body {
      
 }
 .menu-content p {
-    margin-bottom: 85px;
+    margin-bottom: 87px;
     font-size: 13px;
 }
 .icon {
@@ -323,4 +323,5 @@ a button:hover {
 }
 .cart button,h2{
     cursor: pointer;
+
 }
